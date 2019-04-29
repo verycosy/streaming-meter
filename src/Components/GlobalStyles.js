@@ -2,7 +2,7 @@ import { createGlobalStyle } from "styled-components";
 import reset from "styled-reset";
 
 const globalStyles = createGlobalStyle`
-    @import url("https://fonts.googleapis.com/css?family=Noto+Sans+KR");
+    @import url("https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700,800");
     ${reset};
     a{
         text-decoration:none;
@@ -12,11 +12,14 @@ const globalStyles = createGlobalStyle`
         box-sizing:border-box;
     }
     body{
-        font-family: "Noto Sans KR", sans-serif;
+        padding:40px 0px;
+        font-family: 'Nanum Gothic', sans-serif;
         font-size:14px;
         background-color: #f6f6f6;
         color: #353535;
-        flex:column;
+        display:flex;
+        justify-content:center;
+        text-align:center;
     }
 `;
 
