@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.0/workbox-sw.js");
 
 importScripts(
-  "/streaming-meter/precache-manifest.e98111a259410cd75b5321c1a306cf06.js"
+  "/streaming-meter/precache-manifest.48e156c090d8f739ff8d8f22fc21004d.js"
 );
 
 self.addEventListener('message', (event) => {
