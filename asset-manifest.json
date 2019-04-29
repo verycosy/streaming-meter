@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.js": "/streaming-meter/static/js/main.a774c3c5.chunk.js",
+    "main.js.map": "/streaming-meter/static/js/main.a774c3c5.chunk.js.map",
+    "runtime~main.js": "/streaming-meter/static/js/runtime~main.ba8cff74.js",
+    "runtime~main.js.map": "/streaming-meter/static/js/runtime~main.ba8cff74.js.map",
+    "static/js/2.a272504f.chunk.js": "/streaming-meter/static/js/2.a272504f.chunk.js",
+    "static/js/2.a272504f.chunk.js.map": "/streaming-meter/static/js/2.a272504f.chunk.js.map",
+    "index.html": "/streaming-meter/index.html",
+    "precache-manifest.116284330ed35e02a5613533ce4bd4b5.js": "/streaming-meter/precache-manifest.116284330ed35e02a5613533ce4bd4b5.js",
+    "service-worker.js": "/streaming-meter/service-worker.js",
+    "static/media/rabbit.png": "/streaming-meter/static/media/rabbit.84201583.png"
+  }
+}
