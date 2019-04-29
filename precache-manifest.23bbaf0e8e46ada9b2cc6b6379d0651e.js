@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "3fdd6ef60c17fe18734ace2855281374",
+    "revision": "b1b5a14d20f3ffbbaced4b86cbd334da",
     "url": "/streaming-meter/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/streaming-meter/static/js/2.a272504f.chunk.js"
   },
   {
-    "revision": "044d3dbd2966a87fe40a",
-    "url": "/streaming-meter/static/js/main.4e2388c0.chunk.js"
+    "revision": "33d840741ac1d362af60",
+    "url": "/streaming-meter/static/js/main.9665e0f0.chunk.js"
   },
   {
     "revision": "ec1ade2de291da8120a3",
