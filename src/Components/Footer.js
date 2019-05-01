@@ -7,4 +7,6 @@ const Footer = styled.footer`
   margin-top: 40px;
 `;
 
-export default () => <Footer>ⓒ 2018 ViewTube All rights reserved.</Footer>;
+export default () => (
+  <Footer>ⓒ 2019 Streaming Meter All rights reserved.</Footer>
+);

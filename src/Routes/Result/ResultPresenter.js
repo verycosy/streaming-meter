@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled, { keyframes } from "styled-components";
 import Rabbit from "../../rabbit.png";
 
@@ -160,7 +161,7 @@ const ResultPresenter = ({ resultData, relatedData }) => (
       {resultData.approximateData.year}년) 입니다.
     </HowLong>
     <Frequency>
-      지금도...1초에 {resultData.frequency}번꼴로 재생되고 있습니다 !
+      지금도... {resultData.frequency}번꼴로 재생되고 있습니다 !
     </Frequency>
     <Ballon>호고곡..</Ballon>
     <Image src={Rabbit} alt="rabbit" />
@@ -186,7 +187,7 @@ const ResultPresenter = ({ resultData, relatedData }) => (
       <RecommendLabel>관련있는 영상들은 어떠세요?</RecommendLabel>
       {relatedData.map(data => (
         <RecommendVideo key={data.id.videoId}>
-          <a href={`/result/${data.id.videoId}`}>
+          <a href={`${process.env.PUBLIC_URL}/result/${data.id.videoId}`}>
             <img
               src={data.snippet.thumbnails.medium.url}
               alt="Related Video Thumbnail"

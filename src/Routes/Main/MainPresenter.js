@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled, { keyframes } from "styled-components";
 
 const Logo = styled.header`
@@ -174,7 +175,10 @@ const MainPresenter = ({ check, searched, searchData }) => (
       {searched ? (
         <SearchResults>
           {searchData.map(data => (
-            <a href={`/result/${data.id.videoId}`} key={data.id.videoId}>
+            <Link
+              to={`${process.env.PUBLIC_URL}/result/${data.id.videoId}`}
+              key={data.id.videoId}
+            >
               <ResultItem>
                 <img
                   src={data.snippet.thumbnails.default.url}
@@ -185,7 +189,7 @@ const MainPresenter = ({ check, searched, searchData }) => (
                   <ResultChannel>{data.snippet.channelTitle}</ResultChannel>
                 </ResultTitle>
               </ResultItem>
-            </a>
+            </Link>
           ))}
         </SearchResults>
       ) : null}

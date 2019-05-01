@@ -38,9 +38,10 @@ class MainContainer extends Component {
   };
 
   searchKeyword = keyword => {
-    const YOUTUBE_API_KEY = "AIzaSyAi9rPCO41B5eUjRgLicFbu_hxs9xij734";
     const url = encodeURI(
-      `https://www.googleapis.com/youtube/v3/search?fields=items(snippet(title,channelTitle,thumbnails/default),id/videoId)&part=snippet&q=${keyword}&key=${YOUTUBE_API_KEY}&maxResults=5&type=video`
+      `https://www.googleapis.com/youtube/v3/search?fields=items(snippet(title,channelTitle,thumbnails/default),id/videoId)&part=snippet&q=${keyword}&key=${
+        process.env.REACT_APP_KEY
+      }&maxResults=5&type=video`
     ); // type지정 안 해주면 공식 채널 영상이 나오는 게 결과값에 videoID값이 없다
 
     axios({
@@ -87,8 +88,6 @@ class MainContainer extends Component {
       }
     }
   };
-
-  componentDidMount() {}
 
   render() {
     const { searched, searchData } = this.state;

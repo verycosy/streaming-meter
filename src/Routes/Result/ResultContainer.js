@@ -61,10 +61,11 @@ class ResultContainer extends Component {
 
   async componentDidMount() {
     const { id } = this.state;
-    const YOUTUBE_API_KEY = "AIzaSyAi9rPCO41B5eUjRgLicFbu_hxs9xij734";
 
     let resultData;
-    const url = `https://www.googleapis.com/youtube/v3/videos?id=${id}&key=${YOUTUBE_API_KEY}&fields=items(snippet(title,publishedAt),contentDetails(duration),statistics(viewCount))&part=snippet,contentDetails,statistics`;
+    const url = `https://www.googleapis.com/youtube/v3/videos?id=${id}&key=${
+      process.env.REACT_APP_KEY
+    }&fields=items(snippet(title,publishedAt),contentDetails(duration),statistics(viewCount))&part=snippet,contentDetails,statistics`;
 
     await axios({
       url,
@@ -139,7 +140,9 @@ class ResultContainer extends Component {
       }
     );
 
-    const relatedUrl = `https://www.googleapis.com/youtube/v3/search?part=snippet&&regionCode=kr&relatedToVideoId=${id}&type=video&key=${YOUTUBE_API_KEY}&fields=items(id/videoId,snippet(title,thumbnails/medium))`; //&regionCode=kr
+    const relatedUrl = `https://www.googleapis.com/youtube/v3/search?part=snippet&&regionCode=kr&relatedToVideoId=${id}&type=video&key=${
+      process.env.REACT_APP_KEY
+    }&fields=items(id/videoId,snippet(title,thumbnails/medium))`; //&regionCode=kr
 
     await axios({
       url: relatedUrl,

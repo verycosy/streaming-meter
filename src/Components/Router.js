@@ -11,8 +11,12 @@ import Result from "../Routes/Result";
 export default () => (
   <Router>
     <Switch>
-      <Route path="/" exact component={Main} />
-      <Route path="/result/:id" exact component={Result} />
+      <Route path={`${process.env.PUBLIC_URL}/`} exact component={Main} />
+      <Route
+        path={`${process.env.PUBLIC_URL}/result/:id`}
+        exact
+        component={Result}
+      />
       <Redirect from="*" to="/" />
     </Switch>
   </Router>
