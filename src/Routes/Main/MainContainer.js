@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import MainPresenter from "./MainPresenter";
+import KeyStorage from "api-key-storage";
 import axios from "axios";
 
 class MainContainer extends Component {
@@ -37,11 +38,13 @@ class MainContainer extends Component {
     return ID;
   };
 
-  searchKeyword = keyword => {
+  searchKeyword = async keyword => {
+    const { key: API_KEY } = await KeyStorage(
+      process.env.REACT_APP_KEYSTORAGE_ID
+    );
+
     const url = encodeURI(
-      `https://www.googleapis.com/youtube/v3/search?fields=items(snippet(title,channelTitle,thumbnails/default),id/videoId)&part=snippet&q=${keyword}&key=${
-        process.env.REACT_APP_KEY
-      }&maxResults=5&type=video`
+      `https://www.googleapis.com/youtube/v3/search?fields=items(snippet(title,channelTitle,thumbnails/default),id/videoId)&part=snippet&q=${keyword}&key=${API_KEY}&maxResults=5&type=video`
     ); // type지정 안 해주면 공식 채널 영상이 나오는 게 결과값에 videoID값이 없다
 
     axios({
@@ -55,6 +58,7 @@ class MainContainer extends Component {
           for (let item of data.items) {
             item.snippet.title = item.snippet.title
               .replace(/&amp;/g, "&")
+              .replace(/&quot;/g, '"')
               .replace(/&#39;/g, "'");
           }
 

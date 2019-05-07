@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import ResultPresenter from "./ResultPresenter";
 import axios from "axios";
+import KeyStorage from "api-key-storage";
 import DB from "../../DB";
 
 class ResultContainer extends Component {
@@ -61,11 +62,12 @@ class ResultContainer extends Component {
 
   async componentDidMount() {
     const { id } = this.state;
+    const { key: API_KEY } = await KeyStorage(
+      process.env.REACT_APP_KEYSTORAGE_ID
+    );
 
     let resultData;
-    const url = `https://www.googleapis.com/youtube/v3/videos?id=${id}&key=${
-      process.env.REACT_APP_KEY
-    }&fields=items(snippet(title,publishedAt),contentDetails(duration),statistics(viewCount))&part=snippet,contentDetails,statistics`;
+    const url = `https://www.googleapis.com/youtube/v3/videos?id=${id}&key=${API_KEY}&fields=items(snippet(title,publishedAt),contentDetails(duration),statistics(viewCount))&part=snippet,contentDetails,statistics`;
 
     await axios({
       url,
@@ -140,9 +142,7 @@ class ResultContainer extends Component {
       }
     );
 
-    const relatedUrl = `https://www.googleapis.com/youtube/v3/search?part=snippet&&regionCode=kr&relatedToVideoId=${id}&type=video&key=${
-      process.env.REACT_APP_KEY
-    }&fields=items(id/videoId,snippet(title,thumbnails/medium))`; //&regionCode=kr
+    const relatedUrl = `https://www.googleapis.com/youtube/v3/search?part=snippet&&regionCode=kr&relatedToVideoId=${id}&type=video&key=${API_KEY}&fields=items(id/videoId,snippet(title,thumbnails/medium))`; //&regionCode=kr
 
     await axios({
       url: relatedUrl,
