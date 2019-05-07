@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/streaming-meter/static/js/main.26285c05.chunk.js",
-    "main.js.map": "/streaming-meter/static/js/main.26285c05.chunk.js.map",
+    "main.js": "/streaming-meter/static/js/main.8bce9957.chunk.js",
+    "main.js.map": "/streaming-meter/static/js/main.8bce9957.chunk.js.map",
     "runtime~main.js": "/streaming-meter/static/js/runtime~main.ba8cff74.js",
     "runtime~main.js.map": "/streaming-meter/static/js/runtime~main.ba8cff74.js.map",
-    "static/js/2.234f28be.chunk.js": "/streaming-meter/static/js/2.234f28be.chunk.js",
-    "static/js/2.234f28be.chunk.js.map": "/streaming-meter/static/js/2.234f28be.chunk.js.map",
+    "static/js/2.42675964.chunk.js": "/streaming-meter/static/js/2.42675964.chunk.js",
+    "static/js/2.42675964.chunk.js.map": "/streaming-meter/static/js/2.42675964.chunk.js.map",
     "index.html": "/streaming-meter/index.html",
-    "precache-manifest.262e5d7b9b92b46a05ec09e26bccda11.js": "/streaming-meter/precache-manifest.262e5d7b9b92b46a05ec09e26bccda11.js",
+    "precache-manifest.505c30c0d43684f95f490b5b7a23880f.js": "/streaming-meter/precache-manifest.505c30c0d43684f95f490b5b7a23880f.js",
     "service-worker.js": "/streaming-meter/service-worker.js",
     "static/media/rabbit.png": "/streaming-meter/static/media/rabbit.84201583.png"
   }
